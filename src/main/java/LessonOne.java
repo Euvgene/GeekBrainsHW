@@ -17,7 +17,6 @@ public class LessonOne {
         System.out.println(negative(2)); // Для проверки вывод в консоль
         name("Евгений");
         leap(7);
-
     }
 
     public static int expression(int a, int b, int c, int d) { // Задание 3
