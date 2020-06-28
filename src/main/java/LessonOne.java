@@ -1,56 +1,61 @@
 public class LessonOne {
 
-    byte b = 8; //Задание 2
-    short s = 11566; //Задание 2
-    int i = 32023; //Задание 2
-    long l = 6454624L; //Задание 2
-    float f = 10.1f; //Задание 2
-    double d = 10.5; //Задание 2
-    char c = 'A'; //Задание 2
-    boolean bool = true; //Задание 2
-    String str = "Евгений"; // Задание 2
+    //Задание 2
+    byte b = 8;
+    short s = 11566;
+    int i = 32023;
+    long l = 6454624L;
+    float f = 10.1f;
+    double d = 10.5;
+    char c = 'A';
+    boolean bool = true;
+    String str = "Евгений";
 
-    public static void main(String[] args) { // Задание 1
-        System.out.println(expression(10, 11, 12, 1)); // Для проверки вывод в консоль
-        System.out.println(comparison(10, 2)); // Для проверки вывод в консоль
-        positive(-1);
-        System.out.println(negative(2)); // Для проверки вывод в консоль
-        name("Евгений");
-        leap(7);
+    //Задание 1
+    public static void main(String[] args) {
+        expression(10, 11, 12, 1);
+        isInLimit(9.1, 0.9);
+        number(-1);
+        isNegative(-1);
+        getName("Евгений");
+        leapYear(4);
     }
 
-    public static int expression(int a, int b, int c, int d) { // Задание 3
-        int exp;
-        return exp = a * (b + (c / d));
+    // Задание 3
+    public static int expression(int a, int b, int c, int d) {
+        return a * (b + (c / d));
     }
 
-    public static boolean comparison(double compFirst, double compSecond) { // Задание 4
-        return (compFirst + compSecond) >= 10 && (compFirst + compSecond) <= 20;
+    // Задание 4
+    public static boolean isInLimit(double firstNum, double secondNum) {
+        double sum = firstNum + secondNum;
+        return sum >= 10 && sum <= 20;
     }
 
-    public static void positive(double pos) { // Задание 5
-        if (pos >= 0) {
+    // Задание 5
+    public static void number(double myNumber) {
+        if (myNumber >= 0)
             System.out.println("Число положительное!");
-        } else {
+        else
             System.out.println("Число отрицательное!");
-        }
     }
 
-    public static boolean negative(int negNumber) { // Задание 6
+    // Задание 6
+    public static boolean isNegative(int negNumber) {
         return negNumber <= 0;
     }
 
-    public static void name(String myName) { // Задание 7
+    // Задание 7
+    public static void getName(String myName) {
         System.out.println("Привет, " + myName + "!");
     }
 
-    public static void leap(int year) { // Задание 8
-        if (year % 100 == 0 && year % 400 != 0) {
+    // Задание 8
+    public static void leapYear(int year) {
+        if (year % 4 != 0 || year % 100 == 0 && year % 400 != 0)
             System.out.println(year + " год - не високосный.");
-        } else if (year % 4 == 0 || year % 400 == 0) {
+        else
             System.out.println(year + " год - високосный.");
-        } else {
-            System.out.println(year + " год - не високосный.");
-        }
     }
 }
+
