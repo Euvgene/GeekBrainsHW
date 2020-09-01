@@ -22,7 +22,7 @@ public class Main {
         }
     }
 
-    public static <T> ArrayList arrayToArrayList(T[] arr) {
+    public static <T> ArrayList <T> arrayToArrayList(T[] arr) {
         ArrayList<T> result = null;
         if (arr != null && arr.length > 0) {
             result = new ArrayList<>();
